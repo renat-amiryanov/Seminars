@@ -20,6 +20,7 @@ while (counter <= n)
     {
         message = counter != n ? message + counter + ", " : message + counter;
     }
+    
     counter++;
 }
 
