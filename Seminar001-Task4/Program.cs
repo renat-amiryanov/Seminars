@@ -17,4 +17,4 @@ int max = a;
 if (b > max) max = b;
 if (c > max) max = c;
 Console.WriteLine("{0} {1} {2} -> {3}", a, b, c, max);
-
+Console.WriteLine("Программа завершена.");
