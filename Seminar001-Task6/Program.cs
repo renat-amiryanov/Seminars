@@ -13,3 +13,5 @@ int number = Convert.ToInt32(Console.ReadLine());
 string evenOrOdd = number % 2 == 0 ? number + " -> да" : number + " -> нет";
 
 Console.WriteLine(evenOrOdd);
+
+Console.WriteLine("Программа завершена.");
