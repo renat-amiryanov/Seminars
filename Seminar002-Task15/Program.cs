@@ -12,28 +12,28 @@ string checkIsHolyday(int dayNumber)
     {
         case 1:
             return "Нет";
-            break;
+           
         case 2:
             return "Нет";
-            break;
+           
         case 3:
             return "Нет";
-            break;
+           
         case 4:
             return "Нет";
-            break;
+            
         case 5:
             return "Нет";
-            break;
+            
         case 6:
             return "Да";
-            break;
+            
         case 7:
             return "Да";
-            break;
+            
         default:
             return "Некорректный ввод. Такого номера дня не существет.";
-            break;
+           
     }
 }
 
