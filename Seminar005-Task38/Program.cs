@@ -6,12 +6,12 @@
 
 */
 
-int[] realNumbers = { 3, 7, 22, 2, 78 };
+double[] realNumbers = { 3, 7, 22, 2, 78 };
 
-int[] FindMinAndMax(int[] inputArray)
+double[] FindMinAndMax(double[] inputArray)
 {
 
-    int[] minMaxArray = new int[2];
+    double[] minMaxArray = new double[2];
     minMaxArray[0] = inputArray[0];
     minMaxArray[1] = inputArray[inputArray.Length - 1];
 
@@ -23,7 +23,7 @@ int[] FindMinAndMax(int[] inputArray)
     return minMaxArray;
 }
 
-int Sub(int[] inputArray) { return inputArray[1] - inputArray[0]; }
+double Sub(double[] inputArray) { return inputArray[1] - inputArray[0]; }
 
 Console.WriteLine($"[{string.Join(" ", realNumbers)}] -> {Sub(FindMinAndMax(realNumbers))}");
 
