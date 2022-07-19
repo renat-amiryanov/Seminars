@@ -13,19 +13,23 @@
 */
 
 
-}
+
 void FindPointOfIntersection2Lines(double b1, double k1, double b2, double k2)
 {
-    if(k1 ==k2){
-        Console.WriteLine("Прямые");
-        }
-    double x = (b2 - b1)/ (k1 - k2);
-    double y = k2*x + b2;
+    if (k1 == k2)
+    {
+        Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2} и k2 = {k2} -> Прямые параллельны.(т.е. непересекаются)");
+    }
+    else
+    {
+        double x = (b2 - b1) / (k1 - k2);
+        double y = k2 * x + b2;
 
-    Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2} и k2 = {k2} -> ({x:0.0},{y:0.0})");
+        Console.WriteLine($"b1 = {b1}, k1 = {k1}, b2 = {b2} и k2 = {k2} -> ({x:0.0},{y:0.0})");
+    }
 }
 
-FindPointOfIntersection2Lines(2,5,4,9);
+FindPointOfIntersection2Lines(2, 5, 4, 9);
 
-FindPointOfIntersection2Lines(2,2,2,2);
+FindPointOfIntersection2Lines(2, 2, 2, 2);
 
