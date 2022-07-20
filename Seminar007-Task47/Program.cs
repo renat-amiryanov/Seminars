@@ -32,6 +32,10 @@ void DisplayArray(double[,] input)
     }
 }
 
-DisplayArray(CreateAndFill2DimensionalArray(3, 4, -10, 11));
+int m = 3;
+int n = 4;
+int from = -10;
+int to = 11;
+DisplayArray(CreateAndFill2DimensionalArray(m, n, from, to));
 
 //Console.WriteLine(string.Join(",", CreateAndFill2DimensionalArray(3,4,0,10)));
