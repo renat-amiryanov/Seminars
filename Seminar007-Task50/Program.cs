@@ -4,9 +4,23 @@
 */
 
 
+void Display(int[,] values)
+{
+    int row = values.GetLength(0);
+    int col = values.GetLength(1);
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < col; j++)
+        {
+            Console.Write($"{values[i, j]} ");
+        }
+        Console.WriteLine();
+    }
+}
+
 string GetValueByPosition(int[,] data, int rowIdx, int colIdx)
 {
-    string retValue = "Не найдено";
+    string retValue = "такого числа в массиве нет";
 
     for (int i = 0; i < data.GetLength(0); i++)
     {
@@ -24,6 +38,7 @@ int[,] numbers = {
     {7,8,9}
 };
 
-int row = 2, col = 1;
+int row = 1, col = 1;
+Display(numbers);
 string result = GetValueByPosition(numbers, row, col);
-Console.WriteLine(result);
+Console.WriteLine($"{row}{col} -> {result}");
