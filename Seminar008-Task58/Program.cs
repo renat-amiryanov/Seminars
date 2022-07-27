@@ -33,13 +33,23 @@ void Display(int[,] data)
 }
 
 
-int[,] MultiplyMatrixes(int[,] first, int[,] second)
+int[,] MultiplyMatrixes(int[,] a, int[,] b)
 {
-    /*if(first.GetLength(0) == second.GetLength(1)) System.Console.WriteLine("Умножать можно");
-    else System.Console.WriteLine("Умножать нельзя");*/
+    if(a.GetLength(0) == b.GetLength(1)) System.Console.WriteLine("Умножать можно");
+    else { throw new Exception("Умножать нельзя"); }
     
-    int [,] resultOfMultypling = new int [first.GetLength(0),second.GetLength(1)];
+    int [,] resultOfMultypling = new int [a.GetLength(0),b.GetLength(1)];
     
+    for (int i = 0; i < a.GetLength(0); i++)
+    {
+        for (int j = 0; j < b.GetLength(1); j++)
+        {   
+            for (int k = 0; k < b.GetLength(0); k++)
+            {
+                 resultOfMultypling[i,j] += a[i,k] * b[k,j];
+            }              
+        }
+    }
 
     return resultOfMultypling;
 }
