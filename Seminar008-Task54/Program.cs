@@ -14,9 +14,6 @@
 2 4 4 8
 
 */
-
-
-
 void Display(int[,] values)
 {
     int row = values.GetLength(0);
@@ -63,7 +60,13 @@ int[,] input = {
     {5,9,2,3},
     {8,4,2,4}
 };
+
+Console.WriteLine("Input:");
 Display(input);
+
 Console.WriteLine();
+
 int[,] result = SortingRows(input);
+
+Console.WriteLine("Output:");
 Display(result);
