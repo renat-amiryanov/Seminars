@@ -11,37 +11,29 @@
 
 */
 
-
 int[] UniqueArray(int size)
 {
-    int[] a = new int[size];
-    for (int i = 0; i < a.Length; i++)
-    {
-        bool isPresent;
-        do
-        {
-            a[i] = new Random().Next(10, 100);
-            isPresent = false;
-            for (int j = 0; j < i; j++)
-            {
-                int nextNumber = new Random().Next(10, 100);
-                if (a[j] == nextNumber)
-                {
-                    isPresent = true;
-                    break;
-                }
 
+            int[] a = new int[size];          
+            for (int i = 0; i < a.Length; i++)
+            {               
+                var randomNumber= new Random().Next(10, 100);
+                while(a.Any(v => v == randomNumber))
+                {
+                    randomNumber = new Random().Next(10, 100);
+                }
+                a[i] = randomNumber;
+                
             }
-        } while (isPresent);
-    }
-    return a;
+            return a;
+       
 }
 
 int[,,] Generate3DArray(int n)
 {
     int[,,] array3D = new int[n, n, n];
-    int[] uniqueNumbers = UniqueArray(array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2));   
-   
+    int[] uniqueNumbers = UniqueArray(array3D.GetLength(0) * array3D.GetLength(1) * array3D.GetLength(2));
+
     int counter = 0;
     for (int i = 0; i < array3D.GetLength(0); i++)
     {
@@ -52,7 +44,6 @@ int[,,] Generate3DArray(int n)
                 array3D[i, j, k] = uniqueNumbers[counter];
             }
         }
-
     }
     return array3D;
 
@@ -76,4 +67,3 @@ void Display3DArray(int[,,] data)
 int[,,] result = Generate3DArray(2);
 
 Display3DArray(result);
-
